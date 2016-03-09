@@ -4,6 +4,15 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+
+    emberHighCharts: {
+    includeHighCharts: false,
+    includeHighStock: true,
+    includeHighMaps: true,
+    includeHighChartsMore: true,
+    includeHighCharts3D: true,
+    includeModules: ['broken-axis', 'heatmap', ... ] // available modules: broken-axis, canvas-tools, data, drilldowm, exporting, funnel, heatmap, no-data-to-display, solid-gauge, treemap
+  }
     // Add options here
   });
 

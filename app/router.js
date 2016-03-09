@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', function() {
+    this.route('search');
+    this.route('candidate');
+  });
 });
 
 export default Router;

@@ -1,0 +1,43 @@
+<h1> Mia Love </h1>
+
+
+
+
+{{#paper-content}}
+<div class="container">
+
+	<div class="home-card">
+		{{#paper-card}}
+		{{#paper-toolbar }}
+		<div class="md-toolbar-tools" flex=20>
+			<h2 flex=true>
+				Mia Love
+			</h2>
+			{{#paper-button classNames="md-icon-button" action="addButton"}}
+			{{paper-icon icon="add"}}
+			{{/paper-button}}
+		</div>
+		{{/paper-toolbar}}
+
+
+		<div layout="column" role="main flex=20">
+		{{#paper-card-content}}
+			{{#paper-content class="md-whiteframe-z1 list-demo"}}
+			{{#each model.records as |record|}} 
+			{{#paper-item class="md-3-line"}}
+			<img src={{item.face}} alt={{item.who}} class="md-avatar">
+			<div class="md-list-item-text">
+				<h3>{{record.Broad_Sector.Broad_Sector}}</h3>
+				<h4>{{record.Total_$.Total_$}}</h4>
+			</div>
+			{{/paper-item}}
+			{{/each}}
+			{{/paper-content}}
+		{{/paper-card-content}}
+		</div>
+		{{/paper-card}}
+
+	</div>
+
+</div>
+{{/paper-content}}
